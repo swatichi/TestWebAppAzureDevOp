@@ -4,6 +4,7 @@ pipeline {
     stage("Build") {
        steps {
           // Just print a Hello, Pipeline to the console
+            def msbuildHome = tool 'Default MSBuild'
           echo "Hello, Pipeline!"
           
                   bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
