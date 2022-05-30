@@ -9,7 +9,8 @@ node {
       bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" begin /k:\"Jenkin-Test-Project\""
       bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
       bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" end"
-       bat  "\"${msbuildHome}\\MSBuild.exe\" /t:publish"
+    
     }
   }
 }
+https://github.com/swatichi
