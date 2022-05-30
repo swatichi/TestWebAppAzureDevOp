@@ -6,9 +6,8 @@ node {
     def msbuildHome = tool 'Default MSBuild'
    
     withSonarQubeEnv() {
-     
-      bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
-    
+           bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
+          bat "\"${msbuildHome}\\MSBuild.exe\" /t:publish"
     }
   }
 }
