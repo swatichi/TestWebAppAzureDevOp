@@ -1,0 +1,9 @@
+/p:DeployOnBuild=true //Tell MS-Build to deploy on build
+/p:DeployDefaultTarget=WebPublish //Use the WebPublish to Deploy
+/p:WebPublishMethod=FileSystem //Use FileSystem for Publishing
+/p:SkipInvalidConfigurations=true //Skip Invalid Configurations
+/t:build //Do only the build
+/p:Configuration=Release //Do the buld in release mode
+/p:Platform=\”Any CPU\” //For any type of CPU
+/p:DeleteExistingFiles=True //Empty the folder publishing the file
+/p:publishUrl=c:\\inetpub\\wwwroot” //Publish at mentioned location
