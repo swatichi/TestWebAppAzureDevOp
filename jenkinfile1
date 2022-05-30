@@ -1,18 +1,14 @@
-
-pipeline {
-  stages {
-    stage("Build") {
-       steps {
-          // Just print a Hello, Pipeline to the console
-            def msbuildHome = tool 'Default MSBuild'
-          echo "Hello, Pipeline!"
-          
-                  bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
-
-             echo "building , Pipeline!"
-             
-       }
-   }
-   // And next stages if you want to define further...
- } // End of stages
-} // End of pipeline
+node {
+  stage('SCM') {
+    checkout scm
+  }
+  stage('SonarQube Analysis') {
+    def msbuildHome = tool 'Default MSBuild'
+   
+    withSonarQubeEnv() {
+     
+      bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
+    
+    }
+  }
+}
