@@ -7,6 +7,7 @@ pipeline {
           echo "Hello, Pipeline!"
            bat "\"${msbuildHome}\\MSBuild.exe\" /t:Rebuild"
              echo "building , Pipeline!"
+                bat  "\"${msbuildHome}\\MSBuild.exe\" /t:publish"
        }
    }
    // And next stages if you want to define further...
