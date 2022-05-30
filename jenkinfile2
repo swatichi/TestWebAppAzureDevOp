@@ -1,5 +1,5 @@
-/p:DeployOnBuild=true //Tell MS-Build to deploy on build
-/p:DeployDefaultTarget=WebPublish //Use the WebPublish to Deploy
+/p:DeployOnBuild=true 
+/p:DeployDefaultTarget=WebPublish 
 /p:WebPublishMethod=FileSystem //Use FileSystem for Publishing
 /p:SkipInvalidConfigurations=true //Skip Invalid Configurations
 /t:build //Do only the build
